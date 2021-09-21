@@ -1,0 +1,31 @@
+class Bank:
+  def __init__(self, id = 0, balance = 0.0):
+    self.id = id
+    self.balance = balance
+  def setId(self, numA):
+    self.id = numA
+  def setBalance(self, numB):
+    self.balance = numB
+  def getId(self):
+    return self.id
+  def getBalance(self):
+    return self.balance
+  def print(self, numA, numB):
+    print("ID: ", numA," Balance: ", numB)
+class Savings(Bank):
+    def __init__(self, intrestRate = 0.05, intrestEarned = 0):
+      self.intrestRate = intrestRate
+      self.intrestEarned = intrestEarned
+    def getIntrestEarned(self):
+      self.intrestEarned = float(self.balance) * float(self.intrestRate)
+      return self.intrestEarned
+  
+user = Savings()
+
+x = input ("what is your ID? ")
+y = input ("what is your Balance? ")
+
+user.setId(x)
+user.setBalance(y)
+
+print("ID: ", user.getId(), " Balance: ", user.getBalance(), "Intrest Earned: ", user.getIntrestEarned())
