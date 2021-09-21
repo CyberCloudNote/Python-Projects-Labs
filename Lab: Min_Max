@@ -1,0 +1,12 @@
+def fun():
+  list = [22,12,42,33,53,98,67,59,93,13,46]
+  maxA = list[0]
+  minA = list[0]
+  for i in list:
+    if i>= maxA:
+      maxA = i
+    if i <= minA:
+      minA = i
+  print(minA, maxA)
+
+fun()
