@@ -1,0 +1,66 @@
+class Retail:
+  def __init__(self, unitsOnHand = 0, price = 0.0):
+    self.unitsOnHand = unitsOnHand
+    self.price = price
+  def setUnitsOnHand(self, numA):
+    self.unitsOnHand = numA
+  def setPrice(self, numB):
+    self.price = numB
+  def stockMinus(self, numA):
+    x = int(self.unitsOnHand) - int(numA)
+    self.unitsOnHand = x
+  def printUnitsOnHand(self):
+    return self.unitsOnHand
+  def printPrice(self):
+    return self.price
+  
+unitA = Retail()
+unitB = Retail()
+unitC = Retail()
+
+a = input ("How many units of A exist? ")
+b = input ("What is the price? ")
+unitA.setUnitsOnHand(a)
+unitA.setPrice(b)
+
+print();
+
+c = input ("How many units of B exist? ")
+d = input ("What is the price? ")
+unitB.setUnitsOnHand(c)
+unitB.setPrice(d)
+
+print();
+
+e = input ("How many units of C exist? ")
+f = input ("What is the price? ")
+unitC.setUnitsOnHand(e)
+unitC.setPrice(f)
+
+print();
+
+choice = input("Which unit do you want to buy? (A, B, or C) ")
+if(choice == "A"):
+  print("There are ", unitA.printUnitsOnHand() ," units left in stock.")
+  print("The price is ", unitA.printPrice() , " a unit.")
+  number = input("How many do you want to buy? ")
+  unitA.stockMinus(number)
+  tax = int(number) * float(unitA.printPrice()) * 0.08
+  total = int(number) * float(unitA.printPrice()) + tax
+  print("Your Total is:", total)
+elif(choice == "B"):
+  print("There are ", unitB.printUnitsOnHand() ," units left in stock.")
+  print("The price is ", unitB.printPrice() , " a unit.")
+  number = input("How many do you want to buy? ")
+  unitB.stockMinus(number)
+  tax = int(number) * float(unitB.printPrice()) * 0.08
+  total = int(number) * float(unitB.printPrice()) + tax
+  print("Your Total is:", total)
+elif(choice == "C"):
+  print("There are ", unitC.printUnitsOnHand() ," units left in stock.")
+  print("The price is ", unitC.printPrice() , " a unit.")
+  number = input("How many do you want to buy? ")
+  unitC.stockMinus(number)
+  tax = int(number) * float(unitC.printPrice()) * 0.08
+  total = int(number) * float(unitC.printPrice()) + tax
+  print("Your Total is:", total)
