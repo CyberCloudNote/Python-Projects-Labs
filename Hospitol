@@ -1,0 +1,33 @@
+import random
+
+randomlist = []
+for i in range(0,5):
+  n = random.randint(1, 100)
+  randomlist.append(n)
+user = input("Enter your number : ")
+if user in randomlist:
+  print("True")
+else:
+  print("False")
+
+nameList = ["Kerry", "Thomas", "Marina", "Kevin", "Jose", "Gina", "Josephine"]
+firstLetter = ["J","K"]
+for word in nameList:
+  if word[0] in firstLetter:
+    print(word)
+
+patient = input("Are you 1,in-patient or 2, out-patient: ")
+
+if patient == "1":
+  numDays = input("Enter the number of days spent in the hospital: ")
+  numDays = int (numDays)
+  totalDays = numDays * 250
+  numCharger = input ("Hospital’s medication charges: ")
+  numCharger = int (numCharger)
+  totalCharge = numCharger*100
+  finalTotal = totalDays + totalCharge
+  print(finalTotal)
+
+elif patient == "2":
+    bill = input ("What is your medication Bill: ")
+    print(bill)
