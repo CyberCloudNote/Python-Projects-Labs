@@ -1,0 +1,27 @@
+class struct:
+  def __init__(self, name = "", netId = "", gpa = 0.0):
+    self.name = name
+    self.netId = netId
+    self.gpa = gpa
+  def getNetID(self):
+    return self.netId
+  #if you want user to make students
+  def setStudent(self, netId_A, name_A, gpa_A):
+    self.name = name_A
+    self.netId = netId_A
+    self.gpa = gpa_A
+  def printStudent(self):
+      print("NetID: ", self.netId," Name: ", self.name, "GPA: ", self.gpa)
+
+studentA = struct("Tom","er3241", 2.3)
+studentB = struct("Bob","uv9446", 3.7)
+studentC = struct("Max","sc3572", 1.2)
+studentD = struct("Rex","qp7352", 4.0)
+studentE = struct("Meg","by3489", 3.5)
+
+listStudents = [studentA, studentB ,studentC ,studentD ,studentE]
+listSize = len(listStudents)
+x = input ("what is the NetID of the student you want to access? ")
+for i in range(listSize): 
+  if(listStudents[i].getNetID() == x):
+    listStudents[i].printStudent()
