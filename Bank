@@ -1,0 +1,26 @@
+class Bank:
+  def __init__(self, id = 0, balance = 0.0):
+    self.id = id
+    self.balance = balance
+  def setId(self, numA):
+    self.id = numA
+  def setBalance(self, numB):
+    self.balance = numB
+  def getId(self):
+    return self.id
+  def getBalance(self):
+    return self.balance
+  def print(self, numA, numB):
+    print("ID: ", numA," Balance: ", numB)
+
+  
+user = Bank()
+
+x = input ("what is your ID? ")
+y = input ("what is your Balance? ")
+
+user.setId(x)
+user.setBalance(y)
+
+print("ID: ", user.getId(), " Balance: ", user.getBalance())
+user.print(x,y)
